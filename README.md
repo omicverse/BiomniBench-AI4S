@@ -84,11 +84,14 @@ judge. Full write-up + per-cell scores:
 > **Not included, and why.** Two candidate agents could not be run under this
 > harness, so they are omitted rather than scored on a crippled setup:
 >
-> - **[aipoch/open-science](https://github.com/aipoch/open-science)** — ships only
->   as a desktop GUI application with no headless CLI. The harness drives every
->   agent non-interactively on a headless HPC node; a GUI-only app cannot be
+> - **[aipoch/open-science](https://github.com/aipoch/open-science)** — a desktop
+>   GUI wrapper around the **OpenCode** and **Claude Code** engines (it does not
+>   ship an independent agent core), with no headless CLI. The harness drives
+>   every agent non-interactively on a headless HPC node; a GUI-only app cannot be
 >   batch-driven to execute the 50 tasks and emit `trace.md` + `answer.txt`, so
->   there is no reproducible way to score it here.
+>   there is no reproducible way to score it here. Its underlying engines are
+>   already represented — OpenCode via `openscience_ai4s`, Claude Code via
+>   `claude_csswitch`.
 > - **Claude Science** (Anthropic's claude.ai Science) — headless access is
 >   **chat-only**: the tool / code-execution steps a data-analysis task needs are
 >   served by the claude.ai Science backend, which rejects automated/headless

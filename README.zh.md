@@ -65,9 +65,11 @@
 
 > **未纳入及原因。** 有两个候选智能体无法在本 harness 下运行,与其在残缺环境里打分,不如直接不纳入:
 >
-> - **[aipoch/open-science](https://github.com/aipoch/open-science)** —— 只提供桌面 GUI
->   应用,没有无头 CLI。本 harness 在无头 HPC 节点上非交互驱动每个智能体;纯 GUI 应用
->   无法被批量驱动去跑完 50 个任务并产出 `trace.md` + `answer.txt`,因此没有可复现的打分方式。
+> - **[aipoch/open-science](https://github.com/aipoch/open-science)** —— 是对
+>   **OpenCode** 和 **Claude Code** 引擎的桌面 GUI 封装(本身没有独立的智能体内核),且没有无头 CLI。
+>   本 harness 在无头 HPC 节点上非交互驱动每个智能体;纯 GUI 应用无法被批量驱动去跑完 50 个任务
+>   并产出 `trace.md` + `answer.txt`,因此没有可复现的打分方式。它底层的两个引擎其实已被覆盖 ——
+>   OpenCode 见 `openscience_ai4s`、Claude Code 见 `claude_csswitch`。
 > - **Claude Science**(Anthropic 的 claude.ai Science)—— 无头访问**只能对话**:数据分析
 >   任务所需的工具/代码执行步骤由 claude.ai Science 后端提供,而该后端拒绝自动化/无头会话
 >   (HTTP 401),无法在批量 harness 里跑基准的分析任务。(可运行的 Claude 路径 —— 经 CSSwitch
