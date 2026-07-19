@@ -57,17 +57,39 @@ WHITE_LOGOS = {"omicos", "wisp", "openscience_synsci"}
 LIGHT_LOGO_RGB = (26, 40, 72)
 
 
-def load_means():
-    rows = defaultdict(list)
+PASS = 0.70
+
+
+def load_stats(metric):
+    """[(backend, (n, value)), ...] sorted desc by the chosen metric.
+
+    metric='mean'     → dual-judge per-cell mean (0..1).
+    metric='accuracy' → pass@0.70 rate on the DeepSeek judge (0..100), matching
+                        the static accuracy chart + leaderboard.md.
+    """
+    means, dss = defaultdict(list), defaultdict(list)
     with MATRIX.open() as f:
         for r in csv.DictReader(f):
             if r.get("status") == "unavailable":
                 continue
+            b = r["backend"]
             try:
-                rows[r["backend"]].append(float(r["dual_mean"]))
+                means[b].append(float(r["dual_mean"]))
             except (KeyError, ValueError):
-                continue
-    out = {b: (len(v), sum(v) / len(v)) for b, v in rows.items() if v}
+                pass
+            try:
+                dss[b].append(float(r["deepseek"]))
+            except (KeyError, ValueError):
+                pass
+    out = {}
+    for b, m in means.items():
+        if not m:
+            continue
+        n = len(m)
+        ds = dss.get(b) or m
+        val = (sum(m) / n) if metric == "mean" else \
+            100.0 * sum(1 for s in ds if s >= PASS) / len(ds)
+        out[b] = (n, val)
     return sorted(out.items(), key=lambda kv: kv[1][1], reverse=True)
 
 
@@ -93,10 +115,20 @@ def logo_uri(backend, fname, theme):
     return "data:image/png;base64," + base64.b64encode(data).decode()
 
 
-def build(theme):
+def build(theme, metric):
     P = THEMES[theme]
-    items = load_means()
-    axmax = 1.0
+    items = load_stats(metric)
+    is_acc = metric == "accuracy"
+    axmax = 100.0 if is_acc else 1.0
+    decimals = 0 if is_acc else 3
+    unit = "%" if is_acc else ""
+    init = "0%" if is_acc else "0.000"
+    vcol = 74 if is_acc else 64
+    title = ("BiomniBench-DA — pass@0.70 accuracy" if is_acc
+             else "BiomniBench-DA — dual-judge mean rubric score")
+    caption = ("50 tasks · pass@0.70 on the DeepSeek v4-pro judge · all backends deepseek-v4-pro"
+               if is_acc else
+               "50 tasks · mean of two judges (DeepSeek v4-pro + Gemini 3.1 Pro) · all backends deepseek-v4-pro")
     rows_html = []
     for i, (b, (n, val)) in enumerate(items):
         name, logo = DISPLAY.get(b, (b, ""))
@@ -114,7 +146,7 @@ def build(theme):
           </span>
         </div>
         <div class="track"><div class="bar"></div></div>
-        <div class="val" data-v="{val:.3f}">0.000</div>
+        <div class="val" data-v="{val:.4f}">{init}</div>
       </div>""")
     rows_joined = "".join(rows_html)
     n_rows = len(items)
@@ -124,7 +156,7 @@ def build(theme):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BiomniBench-DA — dual-judge mean leaderboard</title>
+<title>{title}</title>
 <style>
   :root {{
     --bg:{P['bg']}; --text:{P['text']}; --sub:{P['sub']}; --bar:{P['bar']};
@@ -144,7 +176,7 @@ def build(theme):
              transition:background .15s,border-color .15s; }}
   .replay:hover {{ border-color:var(--green); }}
   .rows {{ display:flex; flex-direction:column; gap:16px; }}
-  .row {{ display:grid; grid-template-columns:300px 1fr 64px; align-items:center; gap:16px;
+  .row {{ display:grid; grid-template-columns:300px 1fr {vcol}px; align-items:center; gap:16px;
           opacity:0; transform:translateY(6px); }}
   .row.animate {{ animation:reveal .5s ease-out forwards; animation-delay:calc(var(--i)*var(--stagger)); }}
   @keyframes reveal {{ to {{ opacity:1; transform:translateY(0); }} }}
@@ -172,19 +204,21 @@ def build(theme):
 <body>
   <div class="wrap">
     <div class="head">
-      <h1>BiomniBench-DA — dual-judge mean rubric score</h1>
+      <h1>{title}</h1>
       <button class="replay" id="replay">↻ Replay</button>
     </div>
     <div class="rows" id="rows">{rows_joined}
     </div>
     <div class="cap">
-      50 tasks · mean of two judges (DeepSeek v4-pro + Gemini 3.1 Pro) · all backends deepseek-v4-pro<br>
+      {caption}<br>
       {ENGINE_LEGEND}
     </div>
   </div>
 <script>
   const N = {n_rows};
   const GROW_MS = 950, STAG_MS = 280;
+  const DECIMALS = {decimals}, UNIT = "{unit}";
+  const fmt = v => v.toFixed(DECIMALS) + UNIT;
   const rows = Array.from(document.querySelectorAll('.row'));
   function countUp(el, target, dur, delay) {{
     setTimeout(() => {{
@@ -192,15 +226,15 @@ def build(theme):
       function tick(now) {{
         const p = Math.min(1, (now - t0) / dur);
         const e = 1 - Math.pow(1 - p, 3);            // ease-out cubic
-        el.textContent = (target * e).toFixed(3);
+        el.textContent = fmt(target * e);
         if (p < 1) requestAnimationFrame(tick);
-        else el.textContent = target.toFixed(3);
+        else el.textContent = fmt(target);
       }}
       requestAnimationFrame(tick);
     }}, delay);
   }}
   function play() {{
-    rows.forEach(r => {{ r.classList.remove('animate'); const v = r.querySelector('.val'); v.textContent = '0.000'; }});
+    rows.forEach(r => {{ r.classList.remove('animate'); const v = r.querySelector('.val'); v.textContent = fmt(0); }});
     void document.body.offsetWidth;                   // force reflow to restart CSS anims
     rows.forEach((r, i) => {{
       r.classList.add('animate');
@@ -217,12 +251,17 @@ def build(theme):
 
 def main():
     args = sys.argv[1:]
+    metrics = [m for m in ("mean", "accuracy") if m in args] or ["mean", "accuracy"]
     themes = ["dark", "light"] if "both" in args else \
         [t for t in ("dark", "light") if t in args] or ["light"]
-    for theme in themes:
-        out = OUT if theme == "light" else OUT.with_name("leaderboard_mean_dark.html")
-        out.write_text(build(theme), encoding="utf-8")
-        print(f"-> {out}  ({out.stat().st_size/1024:.0f} KB, {theme}, self-contained)")
+    outdir = ROOT / "reports" / "final"
+    for metric in metrics:
+        for theme in themes:
+            stem = "leaderboard_" + ("accuracy" if metric == "accuracy" else "mean")
+            suffix = "" if theme == "light" else "_dark"
+            out = outdir / f"{stem}{suffix}.html"
+            out.write_text(build(theme, metric), encoding="utf-8")
+            print(f"-> {out}  ({out.stat().st_size/1024:.0f} KB, {metric}/{theme})")
 
 
 if __name__ == "__main__":

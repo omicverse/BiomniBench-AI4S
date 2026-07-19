@@ -42,9 +42,10 @@ headline chart above plots the **dual-judge mean** (see
 wraps. See `reports/final/leaderboard.md` for the live table and
 `reports/final/leaderboard_{mean,accuracy}{,_light}.png` for the charts.
 
-🎬 **Animated version** — bars grow in sequence, scores count up (self-contained
-HTML): [`reports/final/leaderboard_mean.html`](reports/final/leaderboard_mean.html)
-· [**▶ view live**](https://htmlpreview.github.io/?https://github.com/omicverse/BiomniBench-AI4S/blob/main/reports/final/leaderboard_mean.html)
+🎬 **Animated version** — bars grow in sequence, values count up (self-contained
+HTML, white bg): mean score → [**▶ view live**](https://htmlpreview.github.io/?https://github.com/omicverse/BiomniBench-AI4S/blob/main/reports/final/leaderboard_mean.html)
+· pass@0.70 accuracy → [**▶ view live**](https://htmlpreview.github.io/?https://github.com/omicverse/BiomniBench-AI4S/blob/main/reports/final/leaderboard_accuracy.html)
+(source: `reports/final/leaderboard_{mean,accuracy}.html`)
 
 > DeepSeek v4-pro is bimodal, so a single run carries per-cell variance.
 
