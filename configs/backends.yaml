@@ -1,0 +1,142 @@
+# Science agents to compare on BiomniBench-DA, in leaderboard order.
+#
+# Each backend is driven by an adapter (src/biology_bench/adapters/) that
+# takes a staged task workspace + a prompt and drives the agent until it
+# writes `trace.md` + `answer.txt`. The SAME dataset staging and SAME rubric
+# judge (configs/models.yaml) are applied to every backend — only the
+# `kind`/`model` differ, so score deltas reflect the agent, not the harness.
+#
+# `enabled: false` backends are skipped by `run`/`smoke` but still appear in
+# the leaderboard as "unavailable" (or graded via `import-artifacts`).
+
+backends:
+  # ---- omicos-core: the proven headless backend ---------------------------
+  - id: omicos
+    kind: omicos
+    enabled: true
+    # Mirrors omicos-biomnibench/configs/models.yaml agent_model. deepseek
+    # v4-pro is the reference backend for BiomniBench-DA in this project.
+    model:
+      provider: deepseek
+      model: deepseek-v4-pro
+      model_context_window: 1000000
+      max_tool_iterations: 150
+      permission_mode: full
+      allow_shell: true
+      allow_file_write: true
+      # vertical_agent_selector routes against this roster (agent_select).
+      # Copied from omicos-biomnibench so routing is identical.
+      team_members:
+        - bulk_rna_analyst
+        - single_cell_preprocessor
+        - single_cell_annotator_pro
+        - cellchat_rust_h5ad_runner
+        - spatial_omics_orchestrator
+        - metabolomics_analyst_pro
+        - proteomics_analyst_pro
+        - microbiome_analyst_pro
+        - variant_analyst
+        - tabular_genomics_analyst
+        - statistical_genetics_analyst
+        - phase_separation_analyst
+        - bulk_epigenomics_analyst
+        - single_cell_epigenomics_analyst
+        - chromatin_3d_analyst
+        - cancer_dependency_analyst
+        - phylogenomics_analyst
+        - clinical_translator_pro
+        - scientific_writer
+
+  # ---- EvoScientist: headless CLI (EvoSci) --------------------------------
+  - id: evoscientist
+    kind: evoscientist
+    enabled: true
+    model:
+      # EvoScientist is model-agnostic. Set to the closest available model.
+      # See docs/parity-caveats.md — perfect DeepSeek parity with omicos may
+      # not be reachable through EvoSci's provider set.
+      provider: deepseek
+      model: deepseek-v4-pro
+      # Extra flags passed to `EvoSci` verbatim (after the built-in ones).
+      extra_args: []
+      timeout_s: 5400
+
+  # wisp-science: Rust native headless CLI (`wisp-science`), runs directly on
+  # el7 (no container), bundled Python+R kernel + ~230 bio MCP tools. DeepSeek
+  # via its OpenAI-compatible provider path.
+  - id: wisp
+    kind: wisp
+    enabled: true
+    repo: https://github.com/xuzhougeng/wisp-science
+    model:
+      model: deepseek-v4-pro
+      timeout_s: 5400
+
+  # Claude Science (on DeepSeek) via CSswitch. Claude Science itself is a
+  # closed-source macOS app; this is the headless equivalent — Claude Code CLI
+  # routed through CSswitch's gateway (claude-opus-4-8 -> deepseek-v4-pro), all
+  # inside the container. Same model as the others.
+  - id: claude_csswitch
+    kind: claude_csswitch
+    enabled: true
+    repo: https://github.com/SuperJJ007/CSswitch
+    model:
+      model: deepseek-v4-pro   # via gateway model-map from claude-opus-4-8
+      timeout_s: 5400
+
+  # biomni: snap-stanford/biomni A1 — the reference agent the BiomniBench
+  # tasks originate from. Runs in its own `biomni_base` conda env (biomni
+  # 0.0.8), driven out-of-process via scripts/biomni_run.py. DeepSeek v4-pro
+  # through biomni's OpenAI-compatible Custom source (parity with the rest).
+  - id: biomni
+    kind: biomni
+    enabled: true
+    repo: https://github.com/snap-stanford/biomni
+    model:
+      provider: deepseek
+      model: deepseek-v4-pro
+      timeout_s: 5400
+
+  # ---- Desktop / browser workbenches: NOT headless-runnable ---------------
+  # These are GUI apps. They cannot be batch-driven on a compute node. Run
+  # them on a desktop (docs/running-competitors.md), then drop their
+  # `trace.md`+`answer.txt` into runs/<id>/<task>/manual/ and grade with
+  # `biology-bench import-artifacts`. Left disabled so a normal run skips them.
+  # synsci: browser workbench, but its CLI has a headless `openscience run
+  # --format json` path. Driven via the published binary inside the container.
+  - id: openscience_synsci
+    kind: synsci
+    enabled: true
+    repo: https://github.com/synthetic-sciences/openscience
+    model:
+      provider: deepseek
+      model: deepseek-v4-pro
+      agent: research
+      timeout_s: 5400
+
+  # ai4s: Tauri desktop app, but driven headlessly via its bundled OpenCode
+  # core (opencode run) inside the Apptainer container. Overlays ai4s's own
+  # skills + AGENTS.md so it runs as the product, not bare opencode.
+  - id: openscience_ai4s
+    kind: ai4s
+    enabled: true
+    repo: https://github.com/ai4s-research/open-science
+    model:
+      provider: deepseek
+      model: deepseek-v4-pro
+      timeout_s: 5400
+
+  - id: openscience_aipoch
+    kind: desktop
+    enabled: false
+    repo: https://github.com/aipoch/open-science
+    note: "Electron app; core AcpRuntime spawns claude-agent-acp (Anthropic proto)"
+
+  # InternAgents (Shanghai AI Lab): the public repo is ONLY a docs site + user
+  # manual — no agent source is published (the app is a closed-source desktop
+  # binary). Cannot be driven from source; scored via import-artifacts only.
+  - id: internagents
+    kind: desktop
+    enabled: false
+    repo: https://github.com/InternScience/InternAgents
+    note: "docs-only repo; closed-source desktop app -> manual import-artifacts"

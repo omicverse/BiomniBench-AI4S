@@ -1,0 +1,39 @@
+# secrets / local env
+.env
+*.secret
+
+# raw per-cell run outputs (774G: staged data, workspaces, containers). The
+# curated, published subset lives in trajectories/ (trace + answer + grade only).
+runs/
+containers/
+*.sif
+
+# keep the published results (reports/final/*), drop everything else under reports/
+reports/*
+!reports/final/
+reports/final/*_run/
+
+# trajectories are published to HuggingFace (omicverse/BiomniBench-AI4S), NOT git
+# (110 MB of per-cell trace/answer/grade). Keep only the pointer README.
+trajectories/*
+!trajectories/README.md
+
+# logo working files
+logos_bak_*/
+logos/_*.png
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# omicos per-run merged agent catalog
+.omicos_catalog/
+
+# logs / scratch
+*.log
+_slurm-*.out
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/

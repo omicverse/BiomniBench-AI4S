@@ -1,0 +1,12 @@
+# Judge model for biology_bench — held CONSTANT across every backend so that
+# score deltas are attributable to the agent under test, not to judge drift.
+#
+# This is byte-identical to omicos-biomnibench/configs/models.yaml's
+# judge_model so a biology_bench score can be compared 1:1 with an
+# omicos-biomnibench score. The grader auto-falls-back along
+# (configured -> anthropic -> gemini -> deepseek); any provider whose API
+# key is unset is skipped.
+judge_model:
+  provider: deepseek           # custom_openai-shaped DeepSeek call
+  model: deepseek-v4-pro
+  # temperature: intentionally unset — let upstream default.

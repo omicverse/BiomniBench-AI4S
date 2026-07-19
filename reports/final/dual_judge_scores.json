@@ -1,0 +1,2127 @@
+{
+ "_schema": {
+  "description": "Per-cell rubric scores under two independent judges (DeepSeek v4-pro + Gemini 3.1 Pro) on the same original trace. dual_mean = (deepseek+gemini)/2. no_output cells (empty deliverable) score 0 under both.",
+  "fields": [
+   "task",
+   "deepseek",
+   "gemini",
+   "dual_mean"
+  ]
+ },
+ "scores": {
+  "omicos": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.84,
+    "gemini": 0.89,
+    "dual_mean": 0.865
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.8,
+    "gemini": 0.8,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.77,
+    "gemini": 0.83,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 0.89,
+    "gemini": 1.0,
+    "dual_mean": 0.945
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.73,
+    "gemini": 0.86,
+    "dual_mean": 0.795
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.65,
+    "gemini": 0.65,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 0.86,
+    "gemini": 1.0,
+    "dual_mean": 0.93
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.6,
+    "gemini": 0.7,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.9,
+    "gemini": 0.8,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.56,
+    "gemini": 0.73,
+    "dual_mean": 0.645
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.9,
+    "gemini": 0.67,
+    "dual_mean": 0.785
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.63,
+    "gemini": 0.9,
+    "dual_mean": 0.765
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.78,
+    "gemini": 0.61,
+    "dual_mean": 0.695
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.92,
+    "gemini": 0.92,
+    "dual_mean": 0.92
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.9,
+    "gemini": 1.0,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.82,
+    "gemini": 0.72,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.82,
+    "gemini": 0.66,
+    "dual_mean": 0.74
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.67,
+    "gemini": 0.75,
+    "dual_mean": 0.71
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.62,
+    "gemini": 0.76,
+    "dual_mean": 0.69
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.85,
+    "gemini": 0.85,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.65,
+    "gemini": 0.65,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.79,
+    "gemini": 0.87,
+    "dual_mean": 0.83
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.46,
+    "gemini": 0.28,
+    "dual_mean": 0.37
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.88,
+    "gemini": 0.83,
+    "dual_mean": 0.855
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.28,
+    "gemini": 0.28,
+    "dual_mean": 0.28
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.75,
+    "gemini": 0.45,
+    "dual_mean": 0.6
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.72,
+    "gemini": 0.56,
+    "dual_mean": 0.64
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.87,
+    "gemini": 0.87,
+    "dual_mean": 0.87
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.69,
+    "gemini": 0.69,
+    "dual_mean": 0.69
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 0.89,
+    "gemini": 1.0,
+    "dual_mean": 0.945
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.87,
+    "gemini": 1.0,
+    "dual_mean": 0.935
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.86,
+    "gemini": 0.66,
+    "dual_mean": 0.76
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.82,
+    "gemini": 0.58,
+    "dual_mean": 0.7
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.51,
+    "gemini": 0.51,
+    "dual_mean": 0.51
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.77,
+    "gemini": 0.59,
+    "dual_mean": 0.68
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.7,
+    "gemini": 0.82,
+    "dual_mean": 0.76
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.35,
+    "gemini": 0.35,
+    "dual_mean": 0.35
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.7,
+    "gemini": 0.84,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.91,
+    "gemini": 0.76,
+    "dual_mean": 0.835
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.72,
+    "gemini": 0.49,
+    "dual_mean": 0.605
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.64,
+    "gemini": 0.65,
+    "dual_mean": 0.645
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.69,
+    "gemini": 0.59,
+    "dual_mean": 0.64
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.76,
+    "gemini": 0.86,
+    "dual_mean": 0.81
+   }
+  ],
+  "claude_csswitch": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.92,
+    "gemini": 0.87,
+    "dual_mean": 0.895
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.86,
+    "gemini": 0.94,
+    "dual_mean": 0.9
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.58,
+    "gemini": 0.6,
+    "dual_mean": 0.59
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.79,
+    "gemini": 0.86,
+    "dual_mean": 0.825
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.6,
+    "gemini": 0.52,
+    "dual_mean": 0.56
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 0.95,
+    "gemini": 0.95,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 0.87,
+    "gemini": 0.87,
+    "dual_mean": 0.87
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.9,
+    "gemini": 0.7,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.7,
+    "gemini": 0.6,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 0.85,
+    "gemini": 0.85,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.48,
+    "gemini": 0.48,
+    "dual_mean": 0.48
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.42,
+    "gemini": 0.59,
+    "dual_mean": 0.505
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.77,
+    "gemini": 0.77,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.8,
+    "gemini": 0.7,
+    "dual_mean": 0.75
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.9,
+    "gemini": 1.0,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.7,
+    "gemini": 0.78,
+    "dual_mean": 0.74
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.73,
+    "gemini": 0.73,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.82,
+    "gemini": 0.82,
+    "dual_mean": 0.82
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.82,
+    "gemini": 0.8,
+    "dual_mean": 0.81
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.59,
+    "gemini": 0.43,
+    "dual_mean": 0.51
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.75,
+    "gemini": 0.67,
+    "dual_mean": 0.71
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.72,
+    "gemini": 0.72,
+    "dual_mean": 0.72
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.47,
+    "gemini": 0.47,
+    "dual_mean": 0.47
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.45,
+    "gemini": 0.4,
+    "dual_mean": 0.425
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.62,
+    "gemini": 0.79,
+    "dual_mean": 0.705
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.38,
+    "gemini": 0.43,
+    "dual_mean": 0.405
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.56,
+    "gemini": 0.69,
+    "dual_mean": 0.625
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.2,
+    "gemini": 0.15,
+    "dual_mean": 0.175
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.25,
+    "gemini": 0.2,
+    "dual_mean": 0.225
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.39,
+    "gemini": 0.27,
+    "dual_mean": 0.33
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.43,
+    "gemini": 0.43,
+    "dual_mean": 0.43
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.47,
+    "gemini": 0.64,
+    "dual_mean": 0.555
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.56,
+    "gemini": 0.79,
+    "dual_mean": 0.675
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.68,
+    "gemini": 0.68,
+    "dual_mean": 0.68
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.38,
+    "gemini": 0.38,
+    "dual_mean": 0.38
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.58,
+    "gemini": 0.67,
+    "dual_mean": 0.625
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.65,
+    "gemini": 0.5,
+    "dual_mean": 0.575
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.95,
+    "gemini": 0.95,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.25,
+    "gemini": 0.25,
+    "dual_mean": 0.25
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.7,
+    "gemini": 0.84,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.9,
+    "gemini": 0.68,
+    "dual_mean": 0.79
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.72,
+    "gemini": 0.77,
+    "dual_mean": 0.745
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.63,
+    "gemini": 0.77,
+    "dual_mean": 0.7
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.49,
+    "gemini": 0.49,
+    "dual_mean": 0.49
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.69,
+    "gemini": 0.79,
+    "dual_mean": 0.74
+   }
+  ],
+  "evoscientist": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.84,
+    "gemini": 0.84,
+    "dual_mean": 0.84
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.86,
+    "gemini": 0.86,
+    "dual_mean": 0.86
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.6,
+    "gemini": 0.6,
+    "dual_mean": 0.6
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 0.86,
+    "gemini": 0.86,
+    "dual_mean": 0.86
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.68,
+    "gemini": 0.68,
+    "dual_mean": 0.68
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.6,
+    "gemini": 0.52,
+    "dual_mean": 0.56
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.4,
+    "gemini": 0.5,
+    "dual_mean": 0.45
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.8,
+    "gemini": 0.8,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 0.8,
+    "gemini": 0.73,
+    "dual_mean": 0.765
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.55,
+    "gemini": 0.48,
+    "dual_mean": 0.515
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 0.77,
+    "gemini": 0.65,
+    "dual_mean": 0.71
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.31,
+    "gemini": 0.26,
+    "dual_mean": 0.285
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.67,
+    "gemini": 0.67,
+    "dual_mean": 0.67
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.7,
+    "gemini": 0.8,
+    "dual_mean": 0.75
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.85,
+    "gemini": 0.77,
+    "dual_mean": 0.81
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.78,
+    "gemini": 0.78,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.65,
+    "gemini": 0.73,
+    "dual_mean": 0.69
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.92,
+    "gemini": 0.9,
+    "dual_mean": 0.91
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.72,
+    "gemini": 0.8,
+    "dual_mean": 0.76
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.27,
+    "gemini": 0.19,
+    "dual_mean": 0.23
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.8,
+    "gemini": 0.52,
+    "dual_mean": 0.66
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.75,
+    "gemini": 0.84,
+    "dual_mean": 0.795
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.6,
+    "gemini": 0.47,
+    "dual_mean": 0.535
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.35,
+    "gemini": 0.3,
+    "dual_mean": 0.325
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.87,
+    "gemini": 0.79,
+    "dual_mean": 0.83
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.31,
+    "gemini": 0.23,
+    "dual_mean": 0.27
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.54,
+    "gemini": 0.46,
+    "dual_mean": 0.5
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.15,
+    "gemini": 0.1,
+    "dual_mean": 0.125
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.2,
+    "gemini": 0.2,
+    "dual_mean": 0.2
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.7,
+    "gemini": 0.64,
+    "dual_mean": 0.67
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.35,
+    "gemini": 0.35,
+    "dual_mean": 0.35
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.54,
+    "gemini": 0.57,
+    "dual_mean": 0.555
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.66,
+    "gemini": 1.0,
+    "dual_mean": 0.83
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.52,
+    "gemini": 0.61,
+    "dual_mean": 0.565
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.51,
+    "gemini": 0.58,
+    "dual_mean": 0.545
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.88,
+    "gemini": 0.79,
+    "dual_mean": 0.835
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.82,
+    "gemini": 0.82,
+    "dual_mean": 0.82
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.25,
+    "gemini": 0.52,
+    "dual_mean": 0.385
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.64,
+    "gemini": 0.74,
+    "dual_mean": 0.69
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.92,
+    "gemini": 0.71,
+    "dual_mean": 0.815
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.37,
+    "gemini": 0.59,
+    "dual_mean": 0.48
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.55,
+    "gemini": 0.56,
+    "dual_mean": 0.555
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.56,
+    "gemini": 0.66,
+    "dual_mean": 0.61
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   }
+  ],
+  "openscience_synsci": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.82,
+    "gemini": 0.77,
+    "dual_mean": 0.795
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.86,
+    "gemini": 0.9,
+    "dual_mean": 0.88
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.37,
+    "gemini": 0.46,
+    "dual_mean": 0.415
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.68,
+    "gemini": 0.61,
+    "dual_mean": 0.645
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.6,
+    "gemini": 0.52,
+    "dual_mean": 0.56
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 0.57,
+    "gemini": 0.57,
+    "dual_mean": 0.57
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.2,
+    "gemini": 0.3,
+    "dual_mean": 0.25
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.8,
+    "gemini": 0.8,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 0.9,
+    "gemini": 1.0,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 0.73,
+    "gemini": 0.45,
+    "dual_mean": 0.59
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.58,
+    "gemini": 0.68,
+    "dual_mean": 0.63
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 0.8,
+    "gemini": 0.9,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.26,
+    "gemini": 0.26,
+    "dual_mean": 0.26
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.77,
+    "gemini": 0.67,
+    "dual_mean": 0.72
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.8,
+    "gemini": 0.63,
+    "dual_mean": 0.715
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.77,
+    "gemini": 0.85,
+    "dual_mean": 0.81
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.84,
+    "gemini": 0.84,
+    "dual_mean": 0.84
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.73,
+    "gemini": 0.73,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.8,
+    "gemini": 0.8,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.82,
+    "gemini": 0.72,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.49,
+    "gemini": 0.07,
+    "dual_mean": 0.28
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.65,
+    "gemini": 0.65,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.91,
+    "gemini": 0.95,
+    "dual_mean": 0.93
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.57,
+    "gemini": 0.57,
+    "dual_mean": 0.57
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.3,
+    "gemini": 0.3,
+    "dual_mean": 0.3
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.42,
+    "gemini": 0.79,
+    "dual_mean": 0.605
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.51,
+    "gemini": 0.43,
+    "dual_mean": 0.47
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.81,
+    "gemini": 0.62,
+    "dual_mean": 0.715
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.1,
+    "gemini": 0.0,
+    "dual_mean": 0.05
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.2,
+    "gemini": 0.2,
+    "dual_mean": 0.2
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.62,
+    "gemini": 0.64,
+    "dual_mean": 0.63
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.38,
+    "gemini": 0.38,
+    "dual_mean": 0.38
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.71,
+    "gemini": 0.54,
+    "dual_mean": 0.625
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.77,
+    "gemini": 1.0,
+    "dual_mean": 0.885
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.52,
+    "gemini": 0.61,
+    "dual_mean": 0.565
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.67,
+    "gemini": 0.58,
+    "dual_mean": 0.625
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.34,
+    "gemini": 0.34,
+    "dual_mean": 0.34
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.74,
+    "gemini": 0.82,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.25,
+    "gemini": 0.2,
+    "dual_mean": 0.225
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.07,
+    "gemini": 0.31,
+    "dual_mean": 0.19
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.72,
+    "gemini": 0.72,
+    "dual_mean": 0.72
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.64,
+    "gemini": 0.49,
+    "dual_mean": 0.565
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.64,
+    "gemini": 0.68,
+    "dual_mean": 0.66
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.49,
+    "gemini": 0.59,
+    "dual_mean": 0.54
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   }
+  ],
+  "openscience_ai4s": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.0,
+    "gemini": 0.89,
+    "dual_mean": 0.445
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.79,
+    "gemini": 0.83,
+    "dual_mean": 0.81
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.4,
+    "gemini": 0.4,
+    "dual_mean": 0.4
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.54,
+    "gemini": 0.61,
+    "dual_mean": 0.575
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.55,
+    "gemini": 0.52,
+    "dual_mean": 0.535
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 0.86,
+    "gemini": 0.86,
+    "dual_mean": 0.86
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.6,
+    "gemini": 0.6,
+    "dual_mean": 0.6
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.5,
+    "gemini": 0.5,
+    "dual_mean": 0.5
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 0.9,
+    "gemini": 1.0,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 0.71,
+    "gemini": 0.71,
+    "dual_mean": 0.71
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.68,
+    "gemini": 0.85,
+    "dual_mean": 0.765
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.39,
+    "gemini": 0.43,
+    "dual_mean": 0.41
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.77,
+    "gemini": 0.7,
+    "dual_mean": 0.735
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.7,
+    "gemini": 0.6,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.82,
+    "gemini": 0.93,
+    "dual_mean": 0.875
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.78,
+    "gemini": 0.78,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.73,
+    "gemini": 0.73,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.9,
+    "gemini": 0.9,
+    "dual_mean": 0.9
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.8,
+    "gemini": 0.82,
+    "dual_mean": 0.81
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.44,
+    "gemini": 0.36,
+    "dual_mean": 0.4
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.67,
+    "gemini": 0.52,
+    "dual_mean": 0.595
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.58,
+    "gemini": 0.55,
+    "dual_mean": 0.565
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.62,
+    "gemini": 0.62,
+    "dual_mean": 0.62
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.3,
+    "gemini": 0.3,
+    "dual_mean": 0.3
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.42,
+    "gemini": 0.66,
+    "dual_mean": 0.54
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.41,
+    "gemini": 0.33,
+    "dual_mean": 0.37
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.81,
+    "gemini": 0.76,
+    "dual_mean": 0.785
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.05,
+    "gemini": 0.0,
+    "dual_mean": 0.025
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.2,
+    "gemini": 0.05,
+    "dual_mean": 0.125
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.36,
+    "gemini": 0.47,
+    "dual_mean": 0.415
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.35,
+    "gemini": 0.43,
+    "dual_mean": 0.39
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.0,
+    "gemini": 0.0,
+    "dual_mean": 0.0
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.72,
+    "gemini": 0.72,
+    "dual_mean": 0.72
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.52,
+    "gemini": 0.52,
+    "dual_mean": 0.52
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.83,
+    "gemini": 0.83,
+    "dual_mean": 0.83
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.77,
+    "gemini": 0.68,
+    "dual_mean": 0.725
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.7,
+    "gemini": 0.7,
+    "dual_mean": 0.7
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.3,
+    "gemini": 0.37,
+    "dual_mean": 0.335
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.67,
+    "gemini": 0.51,
+    "dual_mean": 0.59
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.84,
+    "gemini": 0.62,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.27,
+    "gemini": 0.27,
+    "dual_mean": 0.27
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.54,
+    "gemini": 0.5,
+    "dual_mean": 0.52
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.48,
+    "gemini": 0.61,
+    "dual_mean": 0.545
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.72,
+    "gemini": 0.93,
+    "dual_mean": 0.825
+   }
+  ],
+  "wisp": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.81,
+    "gemini": 0.87,
+    "dual_mean": 0.84
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.94,
+    "gemini": 0.9,
+    "dual_mean": 0.92
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.42,
+    "gemini": 0.66,
+    "dual_mean": 0.54
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.55,
+    "gemini": 0.49,
+    "dual_mean": 0.52
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.52,
+    "gemini": 0.52,
+    "dual_mean": 0.52
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 0.73,
+    "gemini": 0.73,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 0.95,
+    "gemini": 0.95,
+    "dual_mean": 0.95
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 0.87,
+    "gemini": 0.87,
+    "dual_mean": 0.87
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.5,
+    "gemini": 0.5,
+    "dual_mean": 0.5
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.5,
+    "gemini": 0.5,
+    "dual_mean": 0.5
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 0.8,
+    "gemini": 0.9,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 1.0,
+    "gemini": 0.85,
+    "dual_mean": 0.925
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.66,
+    "gemini": 0.83,
+    "dual_mean": 0.745
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 0.67,
+    "gemini": 0.57,
+    "dual_mean": 0.62
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.0,
+    "gemini": 0.0,
+    "dual_mean": 0.0
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.77,
+    "gemini": 0.77,
+    "dual_mean": 0.77
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.7,
+    "gemini": 0.7,
+    "dual_mean": 0.7
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.85,
+    "gemini": 0.85,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.78,
+    "gemini": 0.78,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.64,
+    "gemini": 0.83,
+    "dual_mean": 0.735
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.9,
+    "gemini": 0.8,
+    "dual_mean": 0.85
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.0,
+    "gemini": 0.0,
+    "dual_mean": 0.0
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.51,
+    "gemini": 0.59,
+    "dual_mean": 0.55
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.75,
+    "gemini": 0.9,
+    "dual_mean": 0.825
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.8,
+    "gemini": 0.8,
+    "dual_mean": 0.8
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.52,
+    "gemini": 0.75,
+    "dual_mean": 0.635
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.3,
+    "gemini": 0.3,
+    "dual_mean": 0.3
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.62,
+    "gemini": 0.42,
+    "dual_mean": 0.52
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.18,
+    "gemini": 0.33,
+    "dual_mean": 0.255
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.13,
+    "gemini": 0.28,
+    "dual_mean": 0.205
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.0,
+    "gemini": 0.1,
+    "dual_mean": 0.05
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.2,
+    "gemini": 0.2,
+    "dual_mean": 0.2
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.63,
+    "gemini": 0.38,
+    "dual_mean": 0.505
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.35,
+    "gemini": 0.35,
+    "dual_mean": 0.35
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.47,
+    "gemini": 0.47,
+    "dual_mean": 0.47
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.79,
+    "gemini": 0.79,
+    "dual_mean": 0.79
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.38,
+    "gemini": 0.38,
+    "dual_mean": 0.38
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.67,
+    "gemini": 0.58,
+    "dual_mean": 0.625
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.55,
+    "gemini": 0.56,
+    "dual_mean": 0.555
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.95,
+    "gemini": 0.85,
+    "dual_mean": 0.9
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.0,
+    "gemini": 0.0,
+    "dual_mean": 0.0
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.92,
+    "gemini": 0.92,
+    "dual_mean": 0.92
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.86,
+    "gemini": 0.94,
+    "dual_mean": 0.9
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.49,
+    "gemini": 0.49,
+    "dual_mean": 0.49
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.46,
+    "gemini": 0.53,
+    "dual_mean": 0.495
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.36,
+    "gemini": 0.36,
+    "dual_mean": 0.36
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.86,
+    "gemini": 0.76,
+    "dual_mean": 0.81
+   }
+  ],
+  "biomni": [
+   {
+    "task": "da-1-3",
+    "deepseek": 0.85,
+    "gemini": 0.8,
+    "dual_mean": 0.825
+   },
+   {
+    "task": "da-1-4",
+    "deepseek": 0.9,
+    "gemini": 0.86,
+    "dual_mean": 0.88
+   },
+   {
+    "task": "da-10-1",
+    "deepseek": 0.34,
+    "gemini": 0.34,
+    "dual_mean": 0.34
+   },
+   {
+    "task": "da-10-3",
+    "deepseek": 0.75,
+    "gemini": 1.0,
+    "dual_mean": 0.875
+   },
+   {
+    "task": "da-11-1",
+    "deepseek": 0.63,
+    "gemini": 0.63,
+    "dual_mean": 0.63
+   },
+   {
+    "task": "da-12-2",
+    "deepseek": 0.4,
+    "gemini": 0.48,
+    "dual_mean": 0.44
+   },
+   {
+    "task": "da-12-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-13-3",
+    "deepseek": 0.87,
+    "gemini": 0.78,
+    "dual_mean": 0.825
+   },
+   {
+    "task": "da-13-5",
+    "deepseek": 0.2,
+    "gemini": 0.2,
+    "dual_mean": 0.2
+   },
+   {
+    "task": "da-13-6",
+    "deepseek": 0.5,
+    "gemini": 0.4,
+    "dual_mean": 0.45
+   },
+   {
+    "task": "da-14-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-14-3",
+    "deepseek": 0.85,
+    "gemini": 0.71,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-14-8",
+    "deepseek": 0.58,
+    "gemini": 0.63,
+    "dual_mean": 0.605
+   },
+   {
+    "task": "da-15-1",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-15-2",
+    "deepseek": 0.53,
+    "gemini": 0.53,
+    "dual_mean": 0.53
+   },
+   {
+    "task": "da-15-7",
+    "deepseek": 0.6,
+    "gemini": 0.67,
+    "dual_mean": 0.635
+   },
+   {
+    "task": "da-15-8",
+    "deepseek": 0.6,
+    "gemini": 0.7,
+    "dual_mean": 0.65
+   },
+   {
+    "task": "da-16-1",
+    "deepseek": 0.8,
+    "gemini": 0.88,
+    "dual_mean": 0.84
+   },
+   {
+    "task": "da-17-1",
+    "deepseek": 0.78,
+    "gemini": 0.78,
+    "dual_mean": 0.78
+   },
+   {
+    "task": "da-17-3",
+    "deepseek": 0.73,
+    "gemini": 0.73,
+    "dual_mean": 0.73
+   },
+   {
+    "task": "da-17-5",
+    "deepseek": 0.82,
+    "gemini": 0.75,
+    "dual_mean": 0.785
+   },
+   {
+    "task": "da-18-1",
+    "deepseek": 0.92,
+    "gemini": 0.72,
+    "dual_mean": 0.82
+   },
+   {
+    "task": "da-18-5",
+    "deepseek": 0.44,
+    "gemini": 0.34,
+    "dual_mean": 0.39
+   },
+   {
+    "task": "da-18-7",
+    "deepseek": 0.52,
+    "gemini": 0.67,
+    "dual_mean": 0.595
+   },
+   {
+    "task": "da-19-1",
+    "deepseek": 0.62,
+    "gemini": 0.55,
+    "dual_mean": 0.585
+   },
+   {
+    "task": "da-19-3",
+    "deepseek": 0.39,
+    "gemini": 0.47,
+    "dual_mean": 0.43
+   },
+   {
+    "task": "da-19-4",
+    "deepseek": 0.3,
+    "gemini": 0.25,
+    "dual_mean": 0.275
+   },
+   {
+    "task": "da-19-6",
+    "deepseek": 0.87,
+    "gemini": 0.62,
+    "dual_mean": 0.745
+   },
+   {
+    "task": "da-20-1",
+    "deepseek": 0.23,
+    "gemini": 0.36,
+    "dual_mean": 0.295
+   },
+   {
+    "task": "da-20-3",
+    "deepseek": 0.08,
+    "gemini": 0.16,
+    "dual_mean": 0.12
+   },
+   {
+    "task": "da-20-4",
+    "deepseek": 0.15,
+    "gemini": 0.15,
+    "dual_mean": 0.15
+   },
+   {
+    "task": "da-24-3",
+    "deepseek": 0.2,
+    "gemini": 0.2,
+    "dual_mean": 0.2
+   },
+   {
+    "task": "da-25-1",
+    "deepseek": 0.56,
+    "gemini": 0.56,
+    "dual_mean": 0.56
+   },
+   {
+    "task": "da-26-2",
+    "deepseek": 0.43,
+    "gemini": 0.43,
+    "dual_mean": 0.43
+   },
+   {
+    "task": "da-26-4",
+    "deepseek": 0.4,
+    "gemini": 0.4,
+    "dual_mean": 0.4
+   },
+   {
+    "task": "da-3-4",
+    "deepseek": 1.0,
+    "gemini": 1.0,
+    "dual_mean": 1.0
+   },
+   {
+    "task": "da-3-5",
+    "deepseek": 0.92,
+    "gemini": 1.0,
+    "dual_mean": 0.96
+   },
+   {
+    "task": "da-4-1",
+    "deepseek": 0.61,
+    "gemini": 0.75,
+    "dual_mean": 0.68
+   },
+   {
+    "task": "da-4-6",
+    "deepseek": 0.58,
+    "gemini": 0.58,
+    "dual_mean": 0.58
+   },
+   {
+    "task": "da-4-7",
+    "deepseek": 0.51,
+    "gemini": 0.51,
+    "dual_mean": 0.51
+   },
+   {
+    "task": "da-5-1",
+    "deepseek": 0.65,
+    "gemini": 0.68,
+    "dual_mean": 0.665
+   },
+   {
+    "task": "da-5-3",
+    "deepseek": 0.72,
+    "gemini": 0.85,
+    "dual_mean": 0.785
+   },
+   {
+    "task": "da-6-2",
+    "deepseek": 0.25,
+    "gemini": 0.25,
+    "dual_mean": 0.25
+   },
+   {
+    "task": "da-6-5",
+    "deepseek": 0.35,
+    "gemini": 0.25,
+    "dual_mean": 0.3
+   },
+   {
+    "task": "da-8-1",
+    "deepseek": 0.94,
+    "gemini": 0.94,
+    "dual_mean": 0.94
+   },
+   {
+    "task": "da-8-2",
+    "deepseek": 0.72,
+    "gemini": 0.57,
+    "dual_mean": 0.645
+   },
+   {
+    "task": "da-8-3",
+    "deepseek": 0.43,
+    "gemini": 0.48,
+    "dual_mean": 0.455
+   },
+   {
+    "task": "da-9-1",
+    "deepseek": 0.83,
+    "gemini": 0.83,
+    "dual_mean": 0.83
+   },
+   {
+    "task": "da-9-7",
+    "deepseek": 0.75,
+    "gemini": 0.86,
+    "dual_mean": 0.805
+   }
+  ]
+ }
+}
