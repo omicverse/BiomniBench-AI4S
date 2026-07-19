@@ -74,12 +74,12 @@ ENGINE = {
 ENGINE_LEGEND = ("Engine core:    ◆ Claude Code       ▲ OpenCode       "
                  "● independent / self-built")
 
-# JobBench-ish palettes (dark + light/white-bg).
+# JobBench-ish palettes (dark + light/white-bg). Highlight = OmicVerse dark green.
 THEMES = {
-    "dark":  dict(bg="#0b0b0d", bar="#3a3a3e", bar_hi="#2f6bff",
-                  text="#f2f2f4", subtext="#9a9aa2", hi_text="#cfe0ff"),
-    "light": dict(bg="#ffffff", bar="#e4e4ea", bar_hi="#2f6bff",
-                  text="#17171b", subtext="#6b6b73", hi_text="#1746c8"),
+    "dark":  dict(bg="#0b0b0d", bar="#3a3a3e", bar_hi="#1f9d57",
+                  text="#f2f2f4", subtext="#9a9aa2", hi_text="#9fe3bd"),
+    "light": dict(bg="#ffffff", bar="#e4e4ea", bar_hi="#137a45",
+                  text="#17171b", subtext="#6b6b73", hi_text="#0e5c34"),
 }
 # Logos that are white/transparent → invisible on a white background, so recolor
 # them to a dark navy for the light theme.
