@@ -81,6 +81,21 @@ judge. Full write-up + per-cell scores:
 | `wisp` | independent (native) | [xuzhougeng/wisp-science](https://github.com/xuzhougeng/wisp-science) |
 | `biomni` | independent (Biomni A1) | [snap-stanford/biomni](https://github.com/snap-stanford/biomni) |
 
+> **Not included, and why.** Two candidate agents could not be run under this
+> harness, so they are omitted rather than scored on a crippled setup:
+>
+> - **[aipoch/open-science](https://github.com/aipoch/open-science)** — ships only
+>   as a desktop GUI application with no headless CLI. The harness drives every
+>   agent non-interactively on a headless HPC node; a GUI-only app cannot be
+>   batch-driven to execute the 50 tasks and emit `trace.md` + `answer.txt`, so
+>   there is no reproducible way to score it here.
+> - **Claude Science** (Anthropic's claude.ai Science) — headless access is
+>   **chat-only**: the tool / code-execution steps a data-analysis task needs are
+>   served by the claude.ai Science backend, which rejects automated/headless
+>   sessions (HTTP 401). It cannot run the benchmark's analysis tasks in a batch
+>   harness. (The runnable Claude path — Claude Code via the CSSwitch gateway — is
+>   included as `claude_csswitch`.)
+
 ## How it works
 
 The harness reuses **`omicos-biomnibench`** (public) for BiomniBench-DA's dataset

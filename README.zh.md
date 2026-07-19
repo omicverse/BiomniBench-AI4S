@@ -63,6 +63,16 @@
 | `wisp` | 自研(原生) | [xuzhougeng/wisp-science](https://github.com/xuzhougeng/wisp-science) |
 | `biomni` | 自研(Biomni A1) | [snap-stanford/biomni](https://github.com/snap-stanford/biomni) |
 
+> **未纳入及原因。** 有两个候选智能体无法在本 harness 下运行,与其在残缺环境里打分,不如直接不纳入:
+>
+> - **[aipoch/open-science](https://github.com/aipoch/open-science)** —— 只提供桌面 GUI
+>   应用,没有无头 CLI。本 harness 在无头 HPC 节点上非交互驱动每个智能体;纯 GUI 应用
+>   无法被批量驱动去跑完 50 个任务并产出 `trace.md` + `answer.txt`,因此没有可复现的打分方式。
+> - **Claude Science**(Anthropic 的 claude.ai Science)—— 无头访问**只能对话**:数据分析
+>   任务所需的工具/代码执行步骤由 claude.ai Science 后端提供,而该后端拒绝自动化/无头会话
+>   (HTTP 401),无法在批量 harness 里跑基准的分析任务。(可运行的 Claude 路径 —— 经 CSSwitch
+>   网关的 Claude Code —— 已作为 `claude_csswitch` 纳入。)
+
 ## 工作原理
 
 harness 原样复用 **`omicos-biomnibench`**(公开)做 BiomniBench-DA 的数据装载 +
