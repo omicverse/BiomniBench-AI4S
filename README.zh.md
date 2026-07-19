@@ -29,6 +29,10 @@
 `◆ Claude Code · ▲ OpenCode · ● 自研独立引擎` —— 每个后端封装的底座引擎。完整表见
 `reports/final/leaderboard.md`,图表见 `reports/final/leaderboard_{mean,accuracy}{,_light}.png`。
 
+🎬 **动态版** —— 柱子依次生长、分数同步递增(单文件 HTML):
+[`reports/final/leaderboard_mean.html`](reports/final/leaderboard_mean.html)
+· [**▶ 在线观看**](https://htmlpreview.github.io/?https://github.com/omicverse/BiomniBench-AI4S/blob/main/reports/final/leaderboard_mean.html)
+
 > DeepSeek v4-pro 输出双峰,单跑存在逐格方差。除 omicos 外每家均为单跑;omicos 对 **6 个高方差格**取其多次运行中的最优(纯单跑的 omicos 约 0.73,仍第一)。详见 `reports/final/leaderboard.md` 底部说明。
 
 ## 双判官稳健性
